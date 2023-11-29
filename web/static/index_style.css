@@ -1,0 +1,57 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.one h1 {
+    /*font-family: Jazz LET, fantasy;*/
+    position: relative;
+    color: #333;
+    font-size: 5em;
+    margin: 10px;
+    line-height: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFACD;
+}
+
+.container {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    overflow: hidden;
+    margin: 5px;
+    /*background-color: #333333;*/
+
+}
+
+.select-form {
+    background-color: #FAFAD2;
+    font-size: 20px;
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;
+    margin: 5px;
+    text-align: center;
+    /*font-family: Jazz LET, fantasy;*/
+}
+
+
+.btn-primary {
+    background-color: #FAFAD2;
+    font-size: 20px;
+    border-radius: 20px;
+    width: 410px;
+    height: 40px;
+    margin: 5px;
+    text-align: center;
+}

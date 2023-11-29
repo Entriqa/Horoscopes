@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="../static/horoscope_style.css">
+
+	<title>
+		{{ prediction.name }} {{ prediction.date }}
+	</title>
+</head>
+
+<body>
+
+	<section class="firstsection">
+		<div class="box-main">
+			<div class="firstHalf">
+				<h1 class="text-big" id="web">
+					Предсказание
+				</h1>
+
+				<p class="text-small">
+					{{ prediction.prediction }}
+				</p>
+
+
+			</div>
+		</div>
+	</section>
+
+	<section class="secondsection">
+		<div class="box-main">
+			<div class="secondHalf">
+				<h1 class="text-big" id="program">
+					Цитата дня
+				</h1>
+				<p class="text-small">
+					{{ prediction.quote }}
+				</p>
+
+
+			</div>
+		</div>
+	</section>
+
+	<section class="thirdsection">
+		<div class="paras">
+			<h1 class="sectionTag text-big">Числа дня</h1>
+
+			<p class="sectionSubTag text-small">
+				Вибрирующее число: {{ prediction.vibrating_number }}
+			</p>
+			<p class="sectionSubTag text-small">
+				Счастливые числа: {{ prediction.lucky_numbers }}
+
+			</p>
+
+
+		</div>
+
+	</section>
+
+	<footer class="background">
+
+
+	</footer>
+</body>
+
+</html>

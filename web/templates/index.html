@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- ===== CSS ===== -->
-    <link rel="stylesheet" href="../static/style.css">
-
-    <!-- ===== Iconscout CSS ===== -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="../static/index_style.css">
 
     <title>Horoscopes</title>
 </head>
@@ -17,30 +14,20 @@
 <body>
 <header>
     <div class="one"><h1>Гороскопы</h1></div>
+    <form method="post">
+        <div class="container">
+            <div class="col-6 d-flex flex-column gap-1">
 
-    <div class="container">
-        <select class="form-select" aria-label="Sign of the zodiac">
-            <option value="1">овен</option>
-            <option value="2">телец</option>
-            <option value="3">близнецы</option>
-            <option value="4">рак</option>
-            <option value="5">лев</option>
-            <option value="6">дева</option>
-            <option value="7">весы</option>
-            <option value="8">скорпион</option>
-            <option value="9">стрелец</option>
-            <option value="10">козерог</option>
-            <option value="11">водолей</option>
-            <option value="12">рыбы</option>
-        </select>
+                {{ form.zodiac_sign(class_="select-form") }}
+                {{ form.date(class_="select-form") }}
 
-        <select class="form-select" aria-label="Today or tomorrow">
-            <option value="today">на сегодня</option>
-            <option value="tomorrow">на завтра</option>
-        </select>
+            </div>
 
 
-    </div>
-    <button type="button" class="btn btn-outline-success">Показать</button>
-    </div>
+            <div class="input-field button">
+                {{ form.submit_btn(type="submit", class_="btn-primary") }}
+            </div>
+        </div>
+    </form>
+
 </header>
