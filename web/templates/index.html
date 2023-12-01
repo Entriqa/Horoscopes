@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
@@ -13,7 +13,8 @@
 
 <body>
 <header>
-    <div class="one"><h1>Гороскопы</h1></div>
+    <div>
+    <a class="one" href="/"><h1>Гороскопы</h1></a>
     <form method="post">
         <div class="container">
             <div class="col-6 d-flex flex-column gap-1">
@@ -29,5 +30,6 @@
             </div>
         </div>
     </form>
-
+        {% block content %} {% endblock %}
+    </div>
 </header>

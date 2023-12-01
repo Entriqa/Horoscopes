@@ -1,14 +1,7 @@
-<!DOCTYPE html>
+{% extends "index.html" %}
 
-<html>
-
-<head>
-    <link rel="stylesheet" href="../static/horoscope_style.css">
-
-	<title>
-		{{ prediction.name }} {{ prediction.date }}
-	</title>
-</head>
+<link rel="stylesheet" href="../static/horoscope_style.css">
+{% block content %}
 
 <body>
 
@@ -65,5 +58,4 @@
 
 	</footer>
 </body>
-
-</html>
+{% endblock %}

@@ -1,4 +1,4 @@
-from wtforms import Form, SelectField, SubmitField
+from wtforms import SelectField, SubmitField
 from flask_wtf import FlaskForm
 from sqlalchemy import select
 

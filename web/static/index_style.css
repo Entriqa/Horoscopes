@@ -6,8 +6,10 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
-.one h1 {
+.one a {
     /*font-family: Jazz LET, fantasy;*/
+    text-decoration: none;
+
     position: relative;
     color: #333;
     font-size: 5em;

@@ -3,10 +3,11 @@ import datetime
 from sqlalchemy.orm import mapped_column, Mapped
 
 from sqlalchemy_serializer import SerializerMixin
-from models.db_session import SqlAlchemyBase
+
+from models import db_session
 
 
-class Horoscope(SqlAlchemyBase, SerializerMixin):
+class Horoscope(db_session.SqlAlchemyBase, SerializerMixin):
     __tablename__ = "horoscopes"
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     name: Mapped[str]
