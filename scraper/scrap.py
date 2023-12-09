@@ -1,11 +1,13 @@
 import datetime
 import sys
+import logging
 
 from bs4 import BeautifulSoup
 from requests import get
 from sqlalchemy import select
 
-from models import db_session, horoscope
+from models import horoscope
+from db import db_session
 
 
 class Parser:
@@ -72,7 +74,7 @@ class Parser:
             self.get_zodiac_information()
             self.add_astroprognosis_to_db()
         except Exception as e:
-            print(e, file=sys.stderr)
+            logging.error(e)
 
 
 def get_html(link):
@@ -80,7 +82,7 @@ def get_html(link):
         request = get(link).content.decode('utf-8')
         return request
     except Exception as e:
-        print(e, file=sys.stderr)
+        logging.error(e)
 
 
 def start_parser():

@@ -6,9 +6,10 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
-.one a {
+.one {
     /*font-family: Jazz LET, fantasy;*/
     text-decoration: none;
+    text-align: center;
 
     position: relative;
     color: #333;

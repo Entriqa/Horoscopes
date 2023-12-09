@@ -1,10 +1,11 @@
 import schedule
 import time
 import os
+import logging
 
 import sqlalchemy
 
-from models import db_session
+from db import db_session
 from scrap import start_parser
 
 if __name__ == '__main__':
@@ -20,7 +21,7 @@ if __name__ == '__main__':
             db_session.global_init(db_connection)
             break
         except sqlalchemy.exc.OperationalError as e:
-            print("Problem with db connection")
+            logging.error("Problem with db connection")
 
     parser = start_parser()
     schedule.every().day.at("01:00").do(parser.update_db)
@@ -30,4 +31,4 @@ if __name__ == '__main__':
             schedule.run_pending()
             time.sleep(10)
         except Exception:
-            print("Schedule exception")
+            logging.error("Schedule exception")
