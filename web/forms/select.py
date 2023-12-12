@@ -2,7 +2,7 @@ from wtforms import SelectField, SubmitField
 from flask_wtf import FlaskForm
 from sqlalchemy import select
 
-from models.db_session import create_session
+from db.db_session import create_session
 from models.horoscope import Horoscope
 
 

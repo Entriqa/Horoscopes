@@ -3,7 +3,7 @@ import os
 import sqlalchemy
 
 from web import app
-from web.db import db_session
+from db import db_session
 
 if __name__ == '__main__':
 

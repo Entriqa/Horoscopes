@@ -35,7 +35,7 @@ cd Horoscopes
 > Если скрипт не заупскается, попробуйте запустить его от имени администратора или выполните команду 
 > ```sudo chmod +x run.sh```
 
-<h1>Запуска с помощью Docker-compose</h1>
+<h1>Запуск с помощью Docker-compose</h1>
 <p>Для этого вам необходимо установить Docker и docker-compose.
 Как это сделать вы можете посмотреть <a href="https://www.docker.com/products/docker-desktop/" target="_blank">здесь</a>. </p>
 <ol>

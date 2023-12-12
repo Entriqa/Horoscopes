@@ -4,7 +4,7 @@ import flask
 from sqlalchemy import select
 
 from forms.select import SelectForm
-from web.db.db_session import create_session
+from db.db_session import create_session
 from models.horoscope import Horoscope
 
 
@@ -12,7 +12,7 @@ app = flask.Flask(__name__)
 app.config['SECRET_KEY'] = 'my_secret_key'
 
 
-@app.route('/')
+@app.route('/', methods=["POST", "GET"])
 def main_page():
     form = SelectForm()
     form.set_choices()
@@ -24,7 +24,7 @@ def main_page():
     return flask.render_template('index.html', form=form)
 
 
-@app.route('/horoscope<horoscope>')
+@app.route('/horoscope<horoscope>', methods=["GET", "POST"])
 def horoscope_page(horoscope):
     date = datetime.strptime(horoscope.split(":")[0], "%Y-%m-%d").date()
 
@@ -34,6 +34,7 @@ def horoscope_page(horoscope):
                                                        Horoscope.name == zodiac_sign))
     form = SelectForm()
     form.set_choices()
+    form.zodiac_sign.s
     if form.submit_btn.data:
         zodiac_sign = form.zodiac_sign.choices[int(form.zodiac_sign.data)][1]
         date = form.date.choices[int(form.date.data)][1]
