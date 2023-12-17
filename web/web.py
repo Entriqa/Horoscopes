@@ -34,11 +34,9 @@ def horoscope_page(horoscope):
                                                        Horoscope.name == zodiac_sign))
     form = SelectForm()
     form.set_choices()
-    form.zodiac_sign.s
     if form.submit_btn.data:
         zodiac_sign = form.zodiac_sign.choices[int(form.zodiac_sign.data)][1]
         date = form.date.choices[int(form.date.data)][1]
-        # print(date)
         return flask.redirect(f"/horoscope{date}:{zodiac_sign}")
 
     return flask.render_template('horoscope.html', prediction=prediction, form=form)
